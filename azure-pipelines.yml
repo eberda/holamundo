@@ -9,7 +9,7 @@ pool:
 steps:
 - task: UseNode@2
   inputs:
-    version: '18.x' # Configuración para Node.js 18
+    version: '18.x'
 
 - script: |
     npm install
@@ -31,7 +31,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'VisualStudioEnterpriseMCT'
+    azureSubscription: 'PlusPetrolConnection' # Nombre de tu conexión de servicio
     appType: 'webApp'
-    appName: 'app-demo-01-fxevbmcdc2gyhre8'
+    appName: 'app-test-01-d6ggcpb7g3e9etfv' # Nombre de tu App Service
     package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
