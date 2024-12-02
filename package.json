@@ -1,0 +1,15 @@
+{
+  "name": "hola-mundo-azure",
+  "version": "1.0.0",
+  "description": "App de prueba Hola Mundo para Azure App Services",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
