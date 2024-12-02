@@ -31,7 +31,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<Tu Nombre de Conexión de Servicio>'
+    azureSubscription: 'VisualStudioEnterpriseMCT'
     appType: 'webApp'
-    appName: '<Nombre de tu App en Azure>'
+    appName: 'app-demo-01-fxevbmcdc2gyhre8'
     package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
