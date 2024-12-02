@@ -7,9 +7,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: UseNode@2
-  inputs:
-    version: '18.x'
+- script: |
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+    apt-get install -y nodejs
+    node -v
+  displayName: 'Instalar Node.js 18'
 
 - script: |
     npm install
@@ -31,7 +33,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'PlusPetrolConnection' # Nombre de tu conexión de servicio
+    azureSubscription: 'PlusPetrolConnection'
     appType: 'webApp'
-    appName: 'app-test-01-d6ggcpb7g3e9etfv' # Nombre de tu App Service
+    appName: 'app-test-01-d6ggcpb7g3e9etfv'
     package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
