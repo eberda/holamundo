@@ -9,7 +9,7 @@ pool:
 steps:
 - task: UseNode@2
   inputs:
-    version: '16.x'
+    version: '18.x' # Configuración para Node.js 18
 
 - script: |
     npm install
