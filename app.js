@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hola Mundo desde Azure App Services!');
+    res.send('Hola Mundo prueba Eber usando Node.js 18!');
 });
 
 const port = process.env.PORT || 3000;
