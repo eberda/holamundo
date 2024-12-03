@@ -35,5 +35,5 @@ steps:
   inputs:
     azureSubscription: 'PlusPetrolConnection'
     appType: 'webApp'
-    appName: 'app-test-01-d6ggcpb7g3e9etfv'
+    appName: 'app-test-01'
     package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
